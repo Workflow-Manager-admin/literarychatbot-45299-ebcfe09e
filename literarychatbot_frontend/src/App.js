@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 
+if (process.env.REACT_APP_OPENAI_API_KEY && !window.OPENAI_API_KEY) {
+    window.OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
+}
+
 // PUBLIC_INTERFACE
 /**
  * Character profiles config: Add more as desired
